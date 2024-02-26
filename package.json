@@ -4,7 +4,8 @@
   "description": "Gestor de empresas que se encarga de generar automaticamente documentos con el fin de incorporar nuevos socios a la empresa CORPEREX.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Sebastián Ramirez Girón",
@@ -19,5 +20,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.2.0",
     "morgan": "^1.10.0"
-  }
+  },
+  "type": "module"
 }

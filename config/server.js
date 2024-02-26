@@ -2,11 +2,11 @@ import express from 'express'
 import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
-import { dbConnection } from './morgo.js';
-import authRoutes from '../src/auth/auth.routes.js'
+import { dbConnection } from './mongo.js';
+//import authRoutes from '../src/auth/auth.routes.js'
 
 
-class server{
+class Server{
     constructor() {
         this.app = express();
         this.port = process.env.PORT;
@@ -15,7 +15,7 @@ class server{
 
         this.middlewares();
         this.connectDB();
-        this.routes();
+        //this.routes();
     }
 
         async connectDB() {
@@ -26,10 +26,10 @@ class server{
     this.app.use(express.urlencoded({ extended: false }));
     }
 
-    routes() {
+    /*routes() {
         this.app.use(this.adminPath, adminRoutes);
         this.app.use(this.authPath, authRoutes)
-    }
+    }*/
 
     listen() {
         this.app.listen(this.port, () => {

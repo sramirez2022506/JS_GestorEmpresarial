@@ -1,0 +1,12 @@
+{
+  "name": "js_gestorempresarial",
+  "version": "1.0.0",
+  "description": "Gestor de empresas que se encarga de generar automaticamente documentos con el fin de incorporar nuevos socios a la empresa CORPEREX.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sebastián Ramirez Girón",
+  "license": "ISC"
+}

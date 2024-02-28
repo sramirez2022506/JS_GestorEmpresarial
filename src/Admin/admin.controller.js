@@ -19,6 +19,15 @@ export const getAdmin = async (req = request, res = response) => {
     });
 }
 
+export const getAdminById = async (req, res) => {
+    const { id } = req.params;
+    const admin = await Admin.findOne({ _id: id });
+
+    res.status(200).json({
+        admin,
+    });
+}
+
 export const createAdmin = async (req, res) => {
     const { nAdmin, email, password, role } = req.body;
     const admin = new Admin({ nAdmin, email, password, role });

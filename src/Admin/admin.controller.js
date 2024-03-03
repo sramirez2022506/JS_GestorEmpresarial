@@ -1,6 +1,6 @@
 import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
-import Admin from './admin.model';
+import Admin from '../Admin/admin.model.js';
 
 /*export const getAdmin = async (req = request, res = response) => {
     const { limit, from } = req.query;
@@ -28,7 +28,7 @@ import Admin from './admin.model';
     });
 }
 */
-export const createAdmin = async (req, res) => {
+export const createAdmin = async (req = request, res = response) => {
     const { nAdmin, email, password, role } = req.body;
     const admin = new Admin({ nAdmin, email, password, role });
 

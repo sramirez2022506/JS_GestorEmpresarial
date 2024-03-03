@@ -19,6 +19,10 @@ const companySchema = mongoose.Schema({
     category: {
         type: Boolean,
         default: true
+    },
+    status: {
+        type: Boolean,
+        default: true
     }
 });
 

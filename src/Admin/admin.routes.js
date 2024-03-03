@@ -1,27 +1,21 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import {
-    getAdmin,
-    getAdminById,
-    createAdmin,
-    putAdmin,
-    deleteAdmin
-} from "./admin.controller.js";
-import { fieldsValidator } from "../middlewares/validate-filds.js";
+import { createAdmin } from "./admin.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
-import { existentAdminById, existentEmail, validRole } from "../helpers/db-validators.js";
+import { existentAdminById, existentEmail } from "../helpers/db-validators.js";
 
 const router = Router();
-router.get("/", getAdmin);
 
-router.get(
+//router.get("/", getAdmin);
+
+/*router.get(
     "/:id",
     [
         check("id", "This id is not valid").isMongoId(),
         check("id").custom(existentAdminById),
         validateFields,
     ], getAdminById);
-
+*/
 router.post(
     "/",
     [
@@ -37,7 +31,7 @@ router.post(
     createAdmin
 );
 
-router.put(
+/*router.put(
     "/:id",
     [
         check("id", "This id is not valid").isMongoId(),
@@ -58,5 +52,5 @@ router.delete(
     ],
     deleteAdmin
 );
-
+*/
 export default router;

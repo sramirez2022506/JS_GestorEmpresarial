@@ -2,7 +2,7 @@ import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
 import Admin from './admin.model';
 
-export const getAdmin = async (req = request, res = response) => {
+/*export const getAdmin = async (req = request, res = response) => {
     const { limit, from } = req.query;
     const query = { state: true };
 
@@ -18,8 +18,8 @@ export const getAdmin = async (req = request, res = response) => {
         admins,
     });
 }
-
-export const getAdminById = async (req, res) => {
+*/
+/*export const getAdminById = async (req, res) => {
     const { id } = req.params;
     const admin = await Admin.findOne({ _id: id });
 
@@ -27,7 +27,7 @@ export const getAdminById = async (req, res) => {
         admin,
     });
 }
-
+*/
 export const createAdmin = async (req, res) => {
     const { nAdmin, email, password, role } = req.body;
     const admin = new Admin({ nAdmin, email, password, role });
@@ -41,7 +41,7 @@ export const createAdmin = async (req, res) => {
     });
 }
 
-export const putAdmin = async (req, res = response) => {
+/*export const putAdmin = async (req, res = response) => {
     const { id } = req.params;
     const { _id, password, email, ...rest } = req.body;
 
@@ -66,4 +66,4 @@ export const deleteAdmin = async (req, res) => {
     const authenticatedAdmin = req.admin;
 
     res.status(200).json({ msg: 'Admin user temporaly off', admin, authenticatedAdmin });
-}
+}*/

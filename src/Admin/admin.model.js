@@ -11,12 +11,12 @@ const AdminSchema = mongoose.Schema({
     },
     password: {
         type: String,
-        required: [true, "The password is obligatory"]
+        required: [true, "The password is obligatory"],
+        unique: true
     },
     role: {
         type: String,
-        required: true,
-        enum: ["Admin_role", "Client_role"]
+        default: "Admin_role"
     },
     state: {
         type: Boolean,
@@ -24,10 +24,10 @@ const AdminSchema = mongoose.Schema({
     }
 });
 
-AdminSchema.methods.toJSON = function () {
+/*AdminSchema.methods.toJSON = function () {
     const { __v, password, _id, ...admin } = this.toObject();
     admin.uid = _id;
     return admin;
-};
+};*/
 
 export default mongoose.model('admin', AdminSchema);

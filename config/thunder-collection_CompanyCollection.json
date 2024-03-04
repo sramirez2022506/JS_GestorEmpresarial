@@ -1,0 +1,103 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CompanyCollection",
+    "dateExported": "2024-03-04T01:12:00.232Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "35ee909c-098e-4883-9517-1bf8bcea4360",
+            "colId": "486d77f9-0524-4fd8-a60d-8f449ec98799",
+            "containerId": "",
+            "name": "newAdmin",
+            "url": "http://localhost:8080/companyR/v1/admins",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T23:55:44.191Z",
+            "modified": "2024-03-04T00:02:26.218Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nAdmin\": \"Eduardo\",\n  \"email\": \"eurbina2022506@gmail.com\",\n  \"password\": \"gatoHelado\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "89b34788-8861-4078-ab04-15dd9e780f23",
+            "colId": "486d77f9-0524-4fd8-a60d-8f449ec98799",
+            "containerId": "",
+            "name": "CompanyRegist",
+            "url": "http://localhost:8080/companyR/v1/companyE/new",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-04T00:06:07.927Z",
+            "modified": "2024-03-04T00:07:26.350Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "14e6500b-65ba-43c6-9e49-3695cc9c2751",
+            "colId": "486d77f9-0524-4fd8-a60d-8f449ec98799",
+            "containerId": "",
+            "name": "getReport",
+            "url": "http://localhost:8080/companyR/v1/companyE/report",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-04T00:08:22.202Z",
+            "modified": "2024-03-04T00:08:43.533Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1eaec2b0-0ec5-4266-8574-43c325bcfa63",
+            "colId": "486d77f9-0524-4fd8-a60d-8f449ec98799",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:8080/companyR/v1/auth/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-03-04T00:09:00.722Z",
+            "modified": "2024-03-04T00:21:30.220Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"eurbina2022506@gmail.com\",\n  \"password\": \"$2a$10$GuxHKvDIb2LpmX44qS17j.G1Hum5YnahR0Ov4C0abUnpH5yXtVF6S\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "beb1e37f-a42c-4fbb-a5ab-f8491588b1f6",
+            "colId": "486d77f9-0524-4fd8-a60d-8f449ec98799",
+            "containerId": "",
+            "name": "companyPut",
+            "url": "htt",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-04T00:22:14.559Z",
+            "modified": "2024-03-04T00:22:21.428Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a4b5cca0-725b-4d32-8c16-998aa5c5f507",
+            "colId": "486d77f9-0524-4fd8-a60d-8f449ec98799",
+            "containerId": "",
+            "name": "companyCategoryList",
+            "url": "http://localhost:8080/companyR/v1/companyE",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-04T00:23:28.484Z",
+            "modified": "2024-03-04T00:23:55.745Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

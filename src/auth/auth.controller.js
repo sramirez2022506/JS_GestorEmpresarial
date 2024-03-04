@@ -1,16 +1,22 @@
 import bcryptjs from 'bcryptjs';
-import Administrator from '../Admin/admin.model.js';
+import Admin from '../Admin/admin.model.js';
 import {generateJWT} from '../helpers/generate-jwt.js';
 
 export const login = async (req, res) =>{
     const {email, password} = req.body;
 
     try{
-        const admin = await Administrator.findOne({email});
+        const admin = await Admin.findOne({email});
 
         if(!admin){
             return res.status(400).json({
                 msg: "Incorrect credentials"
+            });
+        }
+
+        if (!admin.status){
+            return res.status(400).json({
+                msg: "The admin user does not exists"
             });
         }
 

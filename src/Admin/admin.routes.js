@@ -18,15 +18,14 @@ const router = Router();
 */
 router.post(
     "/",
-    [
+    [   
+        check("name", "the name is obligatory").not().isEmpty(),
         check("email", "The name is obligatory").isEmail(),
         check("email").custom(existentEmail),
         check("password", "The password most have 6 characters").isLength({
             min: 6,
-        }),
-
-        check("name", "the name is obligatory").not().isEmpty(),
         validateFields,
+        }),
     ],
     createAdmin
 );
